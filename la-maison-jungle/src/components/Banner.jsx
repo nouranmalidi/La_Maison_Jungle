@@ -2,9 +2,27 @@
  * Banner est le composant pour présenter la bannière (la barre de navigation)  
  */
 
+
+// J'importe le fichier Bannier.csss au composant Banner.jsx
+import styles from '../styles/Banner.module.css'
+
+
+
+// J'importe le logo
+import Logo from '../assets/olivier-logo.webp'
+
 // On défint le composant Banner qui est également une fonction avec un message h1 
 const Banner = () => {
-    return <h1>Hello bienvenue à la maison Jungle </h1>;
+    
+    const title = "Bienvenu à la maison"
+
+    return (
+        <div className={styles.banner}>
+            <h1 className={styles.title}> {title} </h1>
+            <img src={Logo} alt="Logo" className={styles.logo} />
+        </div>
+    
+);
 }
 
 // Méthode d'openclassrooom

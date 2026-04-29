@@ -1,0 +1,24 @@
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: olive;
+    padding: 32px;
+    border-bottom: 5px solid wheat;
+}
+
+.title {
+    color: black;
+    border-radius: 10px;
+    z-index: 100px;
+    font-style: italic;
+    margin: auto;
+    font-size: 3rem;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
+    /*Décalage a droite, Décalage a gauche, néteté, couleur du noire avec 40% d'opacité*/
+}
