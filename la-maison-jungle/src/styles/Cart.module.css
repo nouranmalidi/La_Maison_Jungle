@@ -3,6 +3,12 @@
     background-color: #31B572;
     color: white;
     font-style: italic;
-    list-style-type: none;
 }
 
+/* La class panier est sur une balise parent div, il faut spécifier l'enfant pour enlever les boutons : 
+l'héritage ne fonctionne pas*/
+.panier ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

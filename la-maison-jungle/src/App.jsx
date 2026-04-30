@@ -4,6 +4,9 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+
+import ShoppingList from './components/ShoppingList.jsx'
+
 // J'importe le composant Banner.jsx, j'indique la route pour trouver le composant
 import Banner from './components/Banner.jsx'
 
@@ -19,6 +22,8 @@ function App() {
      <Banner />
       
       <Cart />
+
+      <ShoppingList />
     </>
   )
 }

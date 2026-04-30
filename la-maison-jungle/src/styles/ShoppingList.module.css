@@ -1,0 +1,26 @@
+.lmj {
+    list-style: none;
+    background-color: wheat;
+    color: black;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+
+}
+
+.lmjPlantItem {
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
