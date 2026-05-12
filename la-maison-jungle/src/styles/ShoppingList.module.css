@@ -24,3 +24,15 @@
     flex-direction: column;
     position: relative;
 }
+
+.lmjSales {
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position:absolute;
+    right: 0px;
+    top: 10px;
+    font-weight: 500px;
+    color: beige;
+    padding: 5px 10px;
+
+}

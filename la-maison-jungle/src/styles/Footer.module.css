@@ -1,0 +1,16 @@
+.lmjFooter {
+    background-color: rgb(74, 111, 25);
+    padding: 32px;
+    color: black;
+    border-top: solid 3px black;
+    display: flex;
+    /*Mets le bloc de code en horizontale*/
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lmjFooterEmail {
+margin-bottom: 10px;
+
+}

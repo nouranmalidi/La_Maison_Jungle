@@ -11,15 +11,30 @@ import styles from '../styles/Banner.module.css'
 // J'importe le logo
 import Logo from '../assets/olivier-logo.webp'
 
+
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ * Le composant banner.js prend comme props ses enfants déclaré dans le composant App;jsx
+ * J'utilise {children} pour fair appel aux props veanat du composant <Banner> déclaré dans le composant App.jsx
+ * Le composant Banner.jsx retourne une div qui contient les enfants {children}
+ */
+
+
+
+
+
+
 // On défint le composant Banner qui est également une fonction avec un message h1 
-const Banner = () => {
+const Banner = ({children}) => {
     
     const title = "Bienvenu à la maison"
 
     return (
         <div className={styles.banner}>
-            <h1 className={styles.title}> {title} </h1>
-            <img src={Logo} alt="Logo" className={styles.logo} />
+           
+            {children}
         </div>
     
 );

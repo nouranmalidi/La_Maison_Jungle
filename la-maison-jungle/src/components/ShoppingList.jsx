@@ -4,17 +4,30 @@
 
 import styles from '../styles/ShoppingList.module.css'
 
+import CareScale from './CareScale'
+
+import PlantItem from './PlantItem'
+
+import QuestionForm from './QuestionForm'
+
+
+import monstera from '../assets/monstera-logo.webp'
+import olivier from '../assets/olivier-logo.webp'
+import anfou from '../assets/anfou-logo.webp'
 
 
 // Je crée une liste de fleurs. Par la suite, j'utiliserais la liste pour renvoyer des fleurs
 //  depuis le composant ShoppingList
 const plantList = [
     {
-        name: 'montsera',
+        name: 'montsera', 
         category: 'classique',
         id: '1',
         isBestSale: true,
-        isSpecialOffer: true
+        isSpecialOffer: true,
+        water: 3,
+        light: 1,
+        cover: monstera
     },
 
     {
@@ -22,7 +35,11 @@ const plantList = [
         category: 'classique',
         id: '2',
         isBestSale: false,
-        isSpecialOffer: false
+        isSpecialOffer: false,
+        water: 3,
+        light: 1,
+        cover: monstera
+
     },
 
     {
@@ -30,7 +47,10 @@ const plantList = [
         category: 'classique',
         id: '3',
         isBestSale: false,
-        isSpecialOffer: true
+        isSpecialOffer: true,
+        water: 1,
+        light: 2,
+        cover: monstera
     },
 
     {
@@ -38,7 +58,10 @@ const plantList = [
         category: 'classique',
         id: '4',
         isBestSale: false,
-        isSpecialOffer: false
+        isSpecialOffer: false,
+        water: 2,
+        light: 2,
+        cover: monstera
     },
 
     {
@@ -46,7 +69,10 @@ const plantList = [
         category: 'premium',
         id: '5',
         isBestSale: false,
-        isSpecialOffer: true
+        isSpecialOffer: true,
+        water: 1,
+        light: 1,
+        cover: monstera
     },
 
     {
@@ -54,7 +80,10 @@ const plantList = [
         category: 'premium',
         id: '6',
         isBestSale: false,
-        isSpecialOffer: false
+        isSpecialOffer: false,
+        water: 2,
+        light: 3, 
+        cover: monstera
     },
 
     {
@@ -62,31 +91,40 @@ const plantList = [
         category: 'premium',
         id: '7',
         isBestSale: false,
-        isSpecialOffer: false
+        isSpecialOffer: false,
+        water: 3,
+        light: 2, 
+        cover: monstera
     }
 ];
 
 
 
-// Je crée mon composant
+// Je crée mon composant ShoppingList
 const ShoppingList = () => {
     return (
-        <ul className={styles.lmj}>
+        <div>
+            <ul className={styles.lmjPlantList} >
             {
-                plantList.map((plant) => (
-                    <li key={plant.id} className={styles.lmjPlantItem}>
-                        {plant.isBestSale ? <span>++++</span> : <span>----</span>} 
-                        {plant.name}
-                        {plant.isSpecialOffer ? <span>Réduction 🤩🤑 </span> : <span>😨</span>}
-                        </li>
+                plantList.map(({id, name, cover, water, light}) => (
+                    <PlantItem 
+                    key={id}
+                    id={id}
+                    name={name}
+                    cover={cover}
+                    water={water}
+                    light={light}
+                    />
                 )
-
-
-
             )
             }
-            
-        </ul>
+
+
+            </ul>
+
+
+
+        </div>
     )
 }
 
